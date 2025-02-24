@@ -18,11 +18,13 @@ const terms = [
 export const TermList = () => {
     return (
         <ul>
-            {terms.map((items) => (
-                <TermCard
-                    title={items.title}
-                    description={items.description}
-                />
+            {terms.map((items, index) => (
+                <li key={crypto.randomUUID()}>
+                    <TermCard
+                        title={items.title}
+                        description={items.description}
+                    />
+                </li>
             ))}
         </ul>
     )
